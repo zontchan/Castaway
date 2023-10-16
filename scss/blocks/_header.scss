@@ -52,7 +52,7 @@
     .underlined:after {
       content: '';
       position: absolute;
-      background-image: url("../../img/lines/straight-line.svg");
+      background-image: url("../img/lines/straight-line.svg");
       left: -5px;
       bottom: 0;
       width: 160px;
@@ -73,7 +73,7 @@
     &:before {
       content: '';
       position: absolute;
-      background-image: url("../../img/lines/rays.svg");
+      background-image: url("../img/lines/rays.svg");
       left: -26px;
       top: -26px;
       width: 68px;

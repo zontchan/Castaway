@@ -210,7 +210,7 @@ a:hover {
 .header__title .underlined:after {
   content: "";
   position: absolute;
-  background-image: url("../../img/lines/straight-line.svg");
+  background-image: url("../img/lines/straight-line.svg");
   left: -5px;
   bottom: 0;
   width: 160px;
@@ -230,7 +230,7 @@ a:hover {
 .header__content-img:before {
   content: "";
   position: absolute;
-  background-image: url("../../img/lines/rays.svg");
+  background-image: url("../img/lines/rays.svg");
   left: -26px;
   top: -26px;
   width: 68px;
@@ -685,7 +685,7 @@ a:hover {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("../../img/lines/rays2.svg  ");
+  background-image: url("../img/lines/rays2.svg  ");
   width: 147px;
   height: 91px;
   bottom: -26px;
