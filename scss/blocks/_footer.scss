@@ -1,0 +1,88 @@
+.footer{
+  padding-bottom: 100px;
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__header{
+   flex-shrink: 0;
+  }
+  &__logo{
+    width: 224px;
+    margin-bottom: 20px;
+  }
+  &__socials-list{
+    display: flex;
+    gap: 10px;
+  }
+  &__social-item{
+    transition: all 0.1s ease-out;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  &__nav{
+    font-size: 17px;
+    line-height: 27px;
+    display: flex;
+    gap: 16px;
+  }
+  &__nav-list{
+    width: 178px;
+    li+li{
+      margin-top: 10px;
+    }
+  }
+}
+.music-platforms{
+  &__list{
+    display: flex;
+    flex-shrink: 0;
+    gap: 17px;
+    margin-right: 15vw;
+  }
+}
+
+
+@include mediaTablet{
+  .footer{
+    &__logo{
+      width: 124px;
+    }
+    &__nav-list{
+      width: auto;
+    }
+  }
+
+  .music-platforms{
+    &__list{
+      margin-right: 0;
+    }
+  }
+}
+
+
+@include mediaMobile{
+  .footer{
+    padding-bottom: 30px;
+    &__row{
+      flex-direction: column;
+      text-align: center;
+    }
+    &__socials-list{
+      justify-content: center;
+    }
+    &__nav{
+      flex-direction: column-reverse;
+    }
+  }
+
+  .music-platforms{
+    &__list{
+      justify-content: center;
+    }
+  }
+
+}

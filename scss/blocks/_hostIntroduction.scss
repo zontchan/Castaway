@@ -1,0 +1,104 @@
+.host-introduction{
+  margin-bottom: 200px;
+ &__wrapper{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+ }
+  &__arrow{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $accent-color;
+    width: 112px;
+    height: 112px;
+    margin-bottom: 20px;
+
+    &.arrow-down{
+      display: none;
+    }
+  }
+  &__meet{
+    color: $accent-color;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  &__host-name{
+    font-size: 65px;
+    line-height: 79.2px;
+    letter-spacing: 7px;
+    margin-bottom: 28px;
+  }
+  &__host-desc{
+    opacity: 70%;
+    line-height: 33px;
+    max-width: 85%;
+    p+p{
+      margin-top: 33px;
+    }
+  }
+  &__img{
+    flex-shrink: 0;
+    width: 46vw;
+  }
+}
+
+
+@include mediaTablet{
+  .host-introduction{
+    margin-bottom: 100px;
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__arrow{
+      width: 60px;
+      height: 60px;
+
+      svg{
+        transform: rotateZ(90deg);
+      }
+      &.arrow-right{
+        display: none;
+      }
+      &.arrow-down{
+        display: inline-block;
+      }
+    }
+    &__host-name{
+      font-size: 45px;
+      line-height: 59.2px;
+    }
+    &__host-desc{
+      font-size: 20px;
+    }
+    &__img{
+      flex-shrink: 0;
+      width: 450px;
+      height: 543px;
+    }
+  }
+}
+
+@include mediaMobile{
+  .host-introduction{
+    margin-bottom: 70px;
+    &__content{
+      text-align: center;
+    }
+    &__host-name{
+      font-size: 30px;
+      line-height: 39.2px;
+      letter-spacing: 4px;
+    }
+    &__host-desc{
+      max-width: 100%;
+      font-size: 17px;
+      p+p{
+        margin-top: 20px;
+      }
+    }
+    &__img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

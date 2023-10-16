@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+@import "mixins";
+body{
+  font-family: $font-main;
+  color: $main-color;
+  background-color: $dark-bg;
+  font-size: 22px;
+
+}
+
+.container{
+  max-width: 1460px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+
+a{
+  color: $main-color;
+  transition: color 0.2s ease-in-out;
+  &:hover{
+    color: $accent-color;
+  }
+}
+
+.button{
+  padding: 12px 21px;
+  background-color: $accent-color;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 27px;
+  transition: all 0.1s ease-out;
+  &:hover{
+    box-shadow: inset 0 0 5px 5px rgb(12, 85, 100);
+  }
+  &:active{
+    box-shadow: inset 0 0 5px 7px rgb(12, 85, 100);
+  }
+}
+.music-platforms{
+  &__list{
+    height: fit-content;
+  }
+  &__item {
+    transition: all 0.1s ease-out;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+@include mediaTablet{
+  .button{
+    padding: 9px 12px;
+  }
+}
+
+@include mediaMobile{
+  .container{
+    padding: 0 30px;
+  }
+}

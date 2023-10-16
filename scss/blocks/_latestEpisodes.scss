@@ -1,0 +1,146 @@
+.latest-episodes{
+  background-color: $dark-bg;
+  margin-bottom: 260px;
+
+  &__title-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 99px;
+    margin-bottom: 40px;
+  }
+  &__title{
+    font-size: 64px;
+    line-height: 79.2px;
+    letter-spacing: 2.88px;
+    align-self: start;
+  }
+  &__view-all-button{
+    background-color: $accent-color;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  &__cards-list{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.latest-episodes-card{
+  padding: 40px;
+  background-color: $black;
+  border-radius: 32px;
+  display: flex;
+  gap: 53px;
+ &__image{
+   max-height: 432px;
+
+ }
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
+  &__category{
+    align-self: start;
+    background-color: $dark-bg;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 0 16px;
+    line-height: 27px;
+    margin-bottom: 48px;
+  }
+  &__episode-number{
+    color: $accent-color;
+    font-size: 17px;
+    margin-bottom: 17px;
+    .span{
+      font-size: 18px;
+    }
+  }
+  &__episode-title{
+    font-size: 64px;
+    line-height: 70.4px;
+    letter-spacing: 2.56px;
+    margin-bottom: 28px;
+    max-width: 80%;
+  }
+  &__episode-desc{
+    font-size: 22px;
+    line-height: 33px;
+    opacity: 70%;
+    margin-bottom: 18px;
+  }
+  &__view-more-button{
+    align-self: start;
+    margin-top: auto;
+  }
+}
+
+
+@include mediaTablet{
+  .latest-episodes{
+    margin-bottom: 100px;
+    &__title{
+      font-size: 40px;
+    }
+  }
+  .latest-episodes-card{
+    flex-direction: column;
+
+    &__image{
+      max-height: none;
+      width: 50%;
+      align-self: center;
+    }
+    &__episode-title{
+        font-size: 40px;
+        line-height: 65px;
+    }
+    &__episode-desc{
+      font-size: 18px;
+    }
+  }
+}
+
+@include mediaMobile{
+  .latest-episodes{
+    margin-bottom: 70px;
+    &__title-row{
+      height: auto;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__title{
+      font-size: 35px;
+      line-height: 37.2px;
+    }
+    &__view-all-button{
+      align-self: start;
+    }
+    &__cards-list{
+      gap: 30px;
+    }
+  }
+
+  .latest-episodes-card{
+    flex-direction: column;
+    &__category{
+      margin-bottom: 28px;
+    }
+
+    &__image{
+      width: 100%;
+    }
+    &__episode-title{
+      font-size: 30px;
+      line-height: 35px;
+      max-width: none;
+    }
+    &__episode-desc{
+      font-size: 18px;
+    }
+  }
+}
